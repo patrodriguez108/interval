@@ -1,3 +1,7 @@
+# compare first interval with new interval
+# merge if new iterval and first interval overlap
+# go to next interval if there is no overlap
+
 class Interval
 	attr_accessor :start, :end
 
@@ -8,7 +12,10 @@ class Interval
 end
 
 def insert(intervals, new_interval)
-	p intervals
+	intervals.each do |range|
+		p range.start
+		p range.end
+	end
 end
 
 # example_one
