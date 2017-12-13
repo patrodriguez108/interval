@@ -13,9 +13,14 @@ end
 
 def insert(intervals, new_interval)
 	intervals.each do |range|
-		p range.start
-		p range.end
+		if range.start == new_interval.start
+			range.start = new_interval.start
+		end
+		if range.end < new_interval.end
+			range.end = new_interval.end
+		end
 	end
+	p intervals
 end
 
 # example_one
