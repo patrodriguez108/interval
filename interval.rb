@@ -30,7 +30,9 @@ def insert(intervals, new_interval)
 				interval.concat(element)
 			end
 		end
+		interval.sort!
 		interval.uniq!
+		p interval
 		final_intervals << Interval.new(interval[0], interval[-1])
 	end
 	p final_intervals
@@ -38,11 +40,11 @@ end
 
 # example_one
 
-# intervals = [Interval.new(1, 3), Interval.new(6, 9)]
+intervals = [Interval.new(1, 3), Interval.new(6, 9)]
 
-# new_interval = Interval.new(2, 5)
+new_interval = Interval.new(2, 5)
 
-# insert(intervals, new_interval)
+insert(intervals, new_interval)
 # -> [1,5],[6,9]
 
 
